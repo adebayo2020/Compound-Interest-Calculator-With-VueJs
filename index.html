@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: Lightgrey;
+            }
+            h1{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color:seagreen;
+                margin-left: 380px;          
+            }
+            ::placeholder{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            #container {
+                background-color:whitesmoke;
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                border:2px solid seagreen;
+                border-radius: 20px;
+                padding:5px;
+                padding-top:10px;
+                max-width: 35%;
+                margin-left:30%;
+                height:210px;
+            } 
+            #form-left{
+                float:left;
+                width:30%;
+                height:150px;
+                padding-right:5px;
+                padding-left:2px;
+            }
+            #form-right{
+                float:left;
+                width:50%;
+                height:150px;
+                padding-left: 10px;
+            }
+            #label{
+                margin-top: 8px;
+                margin-bottom: 20px;
+            }    
+            input{
+                width:80%;
+                margin-bottom:20px;
+            }    
+            .box{
+                
+                border:2px solid seagreen;
+            }
+        </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Compound Interest Calculator </title>
+    </head>
+    <body>
+        <h1>COMPOUND INTEREST CALCULATOR</h1>
+        <div id="container">
+            <div id="form-left">
+                <div id="label"><label>PRINCIPAL ₦</label ></div>
+                <div id="label"><label>INTEREST RATE %</label></div>
+                <div id="label"><label>NUMBER</label></div>
+                <div id="label"><label>TIME </label></div>
+            </div>
+            <div id="form-right">
+                <form>
+                    <input v-model="principal" class="box" id="principal" type="number" placeholder="Enter Principal amount"><br/>
+                    <input v-model="rate" class="box" id="rate" type="number" placeholder="Enter Rate (%)"><br/>
+                    <input v-model="number" class="box" id="number" type="number" placeholder="Enter Number"><br/>
+                    <input v-model="time" class="box" id="time" type="number" placeholder="Enter loan duration"><br/>
+                    <p> The Compound Interest is ₦{{result()}}</p>
+                </form>
+           
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
